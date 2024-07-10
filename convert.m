@@ -1,11 +1,11 @@
-%subplot(1,3,1);
+subplot(1,3,1);
 i1=imread('test.jpg');
 i1=im2double(i1);
-%imshow(i1);title('Input Image');
-%subplot(1,3,2);
+imshow(i1);title('Input Image');
+subplot(1,3,2);
 r=[0:0.001:1];
 s=[r<=0.5].*(4*r.^3)+[r>0.5].*(-4*(-r+1).^3+1);
-%plot(r,s);title('r-s');
-%subplot(1,3,3);
+plot(r,s);title('r-s');
+subplot(1,3,3);
 T1=[i1<=0.5].*(4*i1.^3)+[i1>0.5].*(-4*(-i1+1).^3+1);
 imshow(T1);title('Out Image');
